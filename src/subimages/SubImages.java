@@ -22,7 +22,7 @@ public class SubImages {
     public static void main(String[] args) throws IOException {
 
         BufferedImage img = null;
-        img = ImageIO.read(new File("G:\\android\\test_images\\test1.jpg"));
+        img = ImageIO.read(new File("images\\test1.jpg"));
 
         int count = 1; //for naming convention as well as keeping track of the number of sub images.
 
@@ -35,7 +35,7 @@ public class SubImages {
                 //sub image starting point defined by i and j & 24x4 is the needed size for the sub image.
                 BufferedImage sub = img.getSubimage(j, i, 24, 24);
                 //save file. For Face detection it will not be saved but will be used in real time discarding non faces.
-                File f = new File("G:\\android\\test_images\\sub_images\\" + count + ".png");
+                File f = new File("subimages\\" + count + ".png");
                 ImageIO.write(sub, "png", f);
 
                 //Just to keep track of the image count.
